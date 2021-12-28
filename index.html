@@ -9,12 +9,18 @@
 </head>
 <body>
     <header>
-         <input type="text" id="text-input" onkeyup="memeText()">
+         <input type="text" id="text-input" maxlength="60" onkeyup="memeText()">
     </header>
     <main id="meme-image-container">
+        
+        <div id="meme-image">
+            <img>
+        </div>
         <p id="meme-text"></p>
     </main>
-
+    <form class="upload">
+        <input type="file" id="meme-insert">
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

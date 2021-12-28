@@ -4,3 +4,5 @@ function memeText(){
     containerText.innerText=texto.value
 }
 memeText()
+
+const x=document.querySelector('#meme-insert')
