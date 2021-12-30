@@ -12,13 +12,13 @@
          Texto: <input type="text" id="text-input" maxlength="60" onkeyup="memeText()">
     </header>
     <form class="upload">
-        <input type="file" id="meme-insert" accept="images/*">
+        <!--Usado o link  sugerito pela Trybe para implementar o criterio 2:
+             https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/27165977#27165977-->
+        <input type="file" id="meme-insert" accept="image/*" 
+        onchange="document.getElementById('meme-image').src = window.URL.createObjectURL(this.files[0])">
     </form>
     <main id="meme-image-container">
-        
-        <div id="meme-image">
-            <img>
-        </div>
+        <img id="meme-image">
         <p id="meme-text"></p>
     </main>
     <button id="fire" onclick="bordaFire()">Fire</button>
